@@ -1,0 +1,21 @@
+.btn {
+  @apply inline-block font-normal py-2 px-4 rounded;
+}
+
+.btn--purple {
+  @apply bg-unity-purple text-white;
+}
+
+.btn--orange {
+  @apply bg-unity-orange text-unity-purple;
+}
+
+.btn--yellow {
+  @apply bg-unity-yellow text-unity-purple;
+}
+
+header .btn--skip:focus {
+  @apply py-2 px-4;
+
+  left: 1rem;
+}
