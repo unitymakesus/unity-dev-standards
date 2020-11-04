@@ -3,10 +3,10 @@
 use Illuminate\Support\Str;
 
 return [
-    'baseUrl'     => '',
-    'title'       => 'Unity Web Agency',
-    'description' => 'Website description.',
-    'production'  => false,
+    'baseUrl'         => '',
+    'siteName'        => 'Unity Web Agency Developer Standards',
+    'siteDescription' => 'Standards and best practices for our development team.',
+    'production'      => false,
 
     // navigation menu
     'navigation' => require_once('lib/nav.php'),
