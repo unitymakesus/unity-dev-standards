@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+
+// Code syntax highlighting.
+@import '~highlight.js/styles/night-owl.css';
+
+// Partials.
+@import 'base';
+@import 'buttons';
+@import 'page';
+
+@tailwind utilities;

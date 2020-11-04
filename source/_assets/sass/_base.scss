@@ -1,0 +1,113 @@
+body {
+  font-size: 16px;
+
+  @screen md {
+    font-size: 18px;
+  }
+}
+
+a {
+  @apply font-normal no-underline text-unity-purple;
+
+  &:hover,
+  &:focus {
+    @apply text-unity-purple;
+  }
+}
+
+blockquote {
+  @apply border-unity-purple border-l-4 font-normal italic my-8 pl-6 text-gray-800 text-lg;
+}
+
+code {
+  @apply bg-gray-300 px-2 py-px rounded text-sm;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply leading-tight font-normal mb-4 mt-8 text-unity-purple;
+
+  &:first-child {
+    @apply mt-0;
+  }
+}
+
+h1 {
+  @apply text-5xl;
+}
+
+h2 {
+  @apply text-4xl;
+}
+
+h3 {
+  @apply text-3xl;
+}
+
+h4 {
+  @apply text-2xl;
+}
+
+h5 {
+  @apply text-xl;
+}
+
+h6 {
+  @apply text-lg;
+}
+
+hr {
+  @apply border-b border-unity-purple my-12 rounded-full;
+}
+
+li {
+  ul,
+  ol {
+    @apply my-0;
+  }
+}
+
+ol,
+ul {
+  @apply my-4;
+}
+
+ul {
+  @apply list-disc list-inside;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+p {
+  @apply my-3;
+
+  @screen md {
+    @apply my-6;
+  }
+}
+
+pre {
+  @apply leading-loose my-6 rounded text-base whitespace-pre-wrap;
+
+  code {
+    @apply bg-transparent block;
+  }
+
+  code.hljs {
+    @apply p-4;
+  }
+
+  .hljs-comment {
+    @apply text-gray-400;
+  }
+}
+
+::selection {
+  @apply bg-unity-purple text-white;
+}
