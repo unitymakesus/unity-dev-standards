@@ -13,6 +13,12 @@
           </div>
           <div id="content" class="content w-full lg:w-3/5 break-words pb-16 lg:pl-4">
             @yield('content')
+              @if ($page->getExtension() === 'md')
+                <footer class="text-right">
+                  <small>Last updated: {{ $page->lastModified() }}</small>
+                </footer>
+              @endif
+            </article>
           </div>
         </div>
       </div>

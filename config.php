@@ -22,6 +22,9 @@ return [
             });
         }
     },
+    'lastModified' => function ($page) {
+        return date('F j, Y', $page->getModifiedTime());
+    },
     'url' => function ($page, $path) {
         return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
     },
