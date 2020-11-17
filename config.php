@@ -3,15 +3,15 @@
 use Illuminate\Support\Str;
 
 return [
-    'baseUrl'     => '',
-    'title'       => 'Unity Web Agency',
-    'description' => 'Website description.',
-    'production'  => false,
+    'baseUrl'         => '',
+    'siteName'        => 'Unity Web Agency Developer Standards',
+    'siteDescription' => 'Standards and best practices for our development team.',
+    'production'      => false,
 
     // navigation menu
     'navigation' => require_once('lib/nav.php'),
 
-    // helpers
+    // helper methods
     'isActive' => function ($page, $path) {
         return Str::endsWith(trimPath($page->getPath()), trimPath($path));
     },
@@ -21,6 +21,9 @@ return [
                 return trimPath($page->getPath()) == trimPath($child);
             });
         }
+    },
+    'lastModified' => function ($page) {
+        return date('F j, Y', $page->getModifiedTime());
     },
     'url' => function ($page, $path) {
         return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
