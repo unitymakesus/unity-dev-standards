@@ -11,7 +11,7 @@ return [
     // navigation menu
     'navigation' => require_once('lib/nav.php'),
 
-    // helpers
+    // helper methods
     'isActive' => function ($page, $path) {
         return Str::endsWith(trimPath($page->getPath()), trimPath($path));
     },

@@ -1,6 +1,7 @@
 import hljs from 'highlight.js/lib/core';
 import html from 'highlight.js/lib/languages/xml';
 import css from 'highlight.js/lib/languages/css';
+import scss from 'highlight.js/lib/languages/scss';
 import javascript from 'highlight.js/lib/languages/javascript';
 import php from 'highlight.js/lib/languages/php';
 import bash from 'highlight.js/lib/languages/bash';
@@ -21,6 +22,7 @@ menuToggle.addEventListener('click', () => {
  * Highlight code blocks.
  */
 hljs.registerLanguage('html', html);
+hljs.registerLanguage('scss', scss);
 hljs.registerLanguage('css', css);
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('php', php);

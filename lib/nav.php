@@ -10,4 +10,13 @@ return [
             'PHP'        => 'coding-standards/php',
         ],
     ],
+    'Collaboration' => [
+        'url' => 'collaboration',
+    ],
+    'Tools' => [
+        'url' => 'tools',
+    ],
+    'Security' => [
+        'url' => 'security',
+    ],
 ];
