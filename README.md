@@ -1,4 +1,4 @@
-# Unity Developer Standards
+# Unity Developer Handbook
 Our nifty static site powered by [Jigsaw](https://jigsaw.tighten.co/)!
 
 ## Getting Started

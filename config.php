@@ -4,7 +4,7 @@ use Illuminate\Support\Str;
 
 return [
     'baseUrl'         => '',
-    'siteName'        => 'Unity Web Agency Developer Standards',
+    'siteName'        => 'Unity Web Agency Developer Handbook',
     'siteDescription' => 'Standards and best practices for our development team.',
     'production'      => false,
 
