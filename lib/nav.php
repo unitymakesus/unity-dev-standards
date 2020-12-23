@@ -13,6 +13,11 @@ return [
     'Collaboration' => [
         'url' => 'collaboration',
     ],
+    'Projects' => [
+        'children' => [
+            'Beta Sites' => 'projects/beta-sites',
+        ],
+    ],
     'Tools' => [
         'url' => 'tools',
     ],
