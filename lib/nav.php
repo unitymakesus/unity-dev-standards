@@ -15,6 +15,7 @@ return [
     ],
     'Projects' => [
         'children' => [
+            'Existing Projects' => 'projects/existing',
             'Beta Sites' => 'projects/beta-sites',
         ],
     ],

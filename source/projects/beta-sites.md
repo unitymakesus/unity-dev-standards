@@ -9,33 +9,33 @@ section: content
 
 Create new account on server with domain: `sitename`.unitybeta.site
 
-## Install SSL on new account
+## 1. Install SSL on new account
   * WHM > Install an SSL Certificate on a Domain
   * Browse Certificates
   * Browse Account: unitywebagency
   * Select non-expired Let's Encrypt certificate for *.unitybeta.site
   * Change domain to `sitename`.unitybeta.site
 
-## Enable shell access
+## 2. Enable shell access
   * WHM > Modify an Account
   * Select account
   * Under Privileges, check the box for "Shell Access"
 
-## Install WordPress
+## 3. Install WordPress
   * cPanel > WordPress Manager
   * Installation URL: https://
   * Skip sitename
   * No plugins
   * Advanced > Table Prefix: wp_
 
-## Change PHP version
+## 4. Change PHP version
 
 The native version of PHP enabled on the server does not include support for certain required PHP extensions. By changing the version to the latest installed version, we can modify the extensions as necessary.
 
   * cPanel > Select PHP Version
   * Change to latest installed PHP (not native), and click "Set as current" link
 
-## Set up Git deploy
+## 5. Set up Git deploy
 
 1. Generate an SSH key
     * cPanel > Terminal
