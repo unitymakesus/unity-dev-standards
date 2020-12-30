@@ -64,7 +64,7 @@ Create an .htaccess file in `wp-content/uploads`:
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule (.*)
+RewriteRule ^([0-9]+/.*)$
 https://[BETA-SITE]/wp-content/uploads/$1
 </IfModule>
 ```
