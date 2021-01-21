@@ -9,5 +9,5 @@
   <p>The intended audience for this document is experienced developers who have a foundation in WordPress / PHP development and front-end languages (HTML, CSS, and JavaScript).</p>
 
   <h2>Contributing</h2>
-  <p>This resource is not meant to be evergreen, but rather, one that grows and evolves with our team and the web. Contributions to our standards are welcome and encouraged. Please submit a <a href="https://github.com/unitymakesus/jigsaw-starter-template">pull request on GitHub</a>!</p>
+  <p>This resource is not meant to be evergreen, but rather, one that grows and evolves with our team and the web. Contributions to our standards are welcome and encouraged. Please submit a <a href="https://github.com/unitymakesus/unity-dev-standards">pull request on GitHub</a>!</p>
 @endsection
