@@ -33,25 +33,25 @@ rm -rf starter-template
 
 ## 3. Set up Git Repository
 
-1. Create a local repo and switch to `dev` branch:
+1. Create a local repo and add the GitHub repo as a remote:
 
 ```
 git init
-git branch main dev
-```
-
-2. Add the GitHub repo as a remote:
-
-```
 git remote add origin [replace with remote repository URL]
 ```
 
-3. Make your initial commit!
+3. Make your initial commit
 
 ```
 git add .
 git commit -m "Initial commit"
-git push -u origin dev
+git push -u origin main
+```
+
+4. Switch to `dev` branch
+
+```
+git branch main dev
 ```
 
 ## 4. Initialize Unity Themes
