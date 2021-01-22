@@ -11,7 +11,7 @@ Use this workflow if you are starting a project from scratch and there is no rep
 
 ## 1. Pre-Build Checklist
 
-[Complete the Pre-Build Checklist](https://forms.gle/vreZiAdHggATknt7A): This checklist will walk you through adding a site to Local and creating a repo in GitHub. The answers you record in this form will allow other developers on our team to collaborate!
+[Complete the Pre-Build Checklist](https://forms.gle/vreZiAdHggATknt7A): This checklist will walk you through adding a site to Local. The answers you record in this form will allow other developers on our team to collaborate!
 
 ## 2. Add Starter Template
 
@@ -31,9 +31,30 @@ cp -r starter-template/. .
 rm -rf starter-template
 ```
 
-4. Create a local repo with an initial commit and push to the GitHub repo.
+## 3. Set up Git Repository
 
-## 3. Initialize Unity Themes
+1. Create a local repo and switch to `dev` branch:
+
+```
+git init
+git branch main dev
+```
+
+2. Add the GitHub repo as a remote:
+
+```
+git remote add origin [replace with remote repository URL]
+```
+
+3. Make your initial commit!
+
+```
+git add .
+git commit -m "Initial commit"
+git push -u origin dev
+```
+
+## 4. Initialize Unity Themes
 
 1. In the `unity-child` theme directory:
 
