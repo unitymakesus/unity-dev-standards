@@ -68,16 +68,18 @@ li {
   ul,
   ol {
     @apply my-0;
+
+    list-style-type: circle;
   }
 }
 
 ol,
 ul {
-  @apply my-4;
+  @apply my-4 ml-6;
 }
 
 ul {
-  @apply list-disc list-inside;
+  @apply list-disc;
 }
 
 ol {

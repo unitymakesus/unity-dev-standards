@@ -1,4 +1,4 @@
-<li class="pl-4">
+<li class="pl-4 py-1 -indent-sm {{ ($level != '0') ? 'text-base' : '' }}">
   @if ($url = is_string($item) ? $item : $item->url)
     {{-- Menu item with URL--}}
     <a href="{{ $page->url($url) }}" class="{{ 'lvl' . $level }} {{ $page->isActiveParent($item) ? 'lvl' . $level . '-active' : '' }} {{ $page->isActive($url) ? 'active font-bold text-unity-purple' : '' }} nav-menu__item" {{ $page->isActive($url) ? 'aria-current="page"' : '' }}>{{ $label }}</a>
