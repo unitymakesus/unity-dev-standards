@@ -1,0 +1,15 @@
+table {
+  @apply mb-6;
+}
+
+th {
+  @apply text-left border-b border-gray-300;
+}
+
+td {
+  @apply py-2 text-base;
+}
+
+tbody tr:nth-of-type(odd) {
+  @apply bg-gray-200;
+}
