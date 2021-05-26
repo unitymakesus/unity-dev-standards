@@ -5,7 +5,7 @@ Our nifty static site powered by [Jigsaw](https://jigsaw.tighten.co/)!
 
 **System Requirements**
 
-* PHP >= 7.2.5
+* PHP >= 7.4
 * Node > 8
 * npm
 * Composer
