@@ -2,7 +2,7 @@
   "name": "unitymakesus/jigsaw-starter-template",
   "description": "For internal documentation projects at Unity Web Agency.",
   "require": {
-    "php": "^7.2.5",
+    "php": "^7.4",
     "tightenco/jigsaw": "^1.3"
   }
 }
