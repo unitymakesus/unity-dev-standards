@@ -19,6 +19,7 @@ return [
             'New Simple' => 'projects/new-simple',
             'Existing Projects' => 'projects/existing',
             'Beta Sites' => 'projects/beta-sites',
+            'Staging Sites' => 'projects/staging-sites',
         ],
     ],
     'Tools' => [
