@@ -27,6 +27,7 @@ Create new account on server with domain: `sitename`.unitybeta.site
   * Skip sitename
   * No plugins
   * Advanced > Table Prefix: wp_
+  * Advanced > Auto Upgrade WordPress Core: Upgrade to Minor versions only
 
 ## 4. Change PHP version
 
@@ -45,29 +46,28 @@ The native version of PHP enabled on the server does not include support for cer
     ```
     In this example, `username` represents the cPanel account username and `example` represents the domain name.
 
-    _Note: Save file in default location, and press Enter to continue.
-    Do not enter a passphrase, and press Enter to continue (2x)._
-
-    * Get the public key by entering the following command and copying the result:
+    * Enter file in which to save the key:
     ```
-    cat ~/.ssh/id_rsa.pub
+    /home/[username]/.ssh/github_rsa
+    ```
+    In this example, `username` represents the cPanel account username.
+
+    _Note: Do not enter a passphrase, and press Enter to continue (2x)._
+
+    * Get the private key by entering the following command and copying the full result (including the first and last line):
+    ```
+    cat ~/.ssh/github_rsa
     ```
     The output should resemble the following example, where AAAAB3Nza... represents a valid SSH key:
     ```
-    ssh-rsa AAAAB3Nza...
+    -----BEGIN RSA PRIVATE KEY-----
+    AAAAB3Nza...
+    -----END RSA PRIVATE KEY-----
     ```
 
-2. Add deploy key to Github
+2. Add secrets to GitHub
+    * In the GitHub repository for this project, go to Settings > Secrets. Create the following new repository secrets:
 
-In the Github repository for this project, go to Settings > Deploy Keys. Create a new key and paste the public key from step 1.
-
-_Note: You do not need to select the "Allow write access" checkbox._
-
-3. Add Git repo to cPanel
-
-    * In repo, update line 3 of .cpanel.yml file with the correct deploy location by replacing `user` with the cPanel account username.
-    * cPanel > Git Version Control
-    * Create repo. Past in the Github clone URL. The following should be automatically populated:
-        * Repo path: `home/clientname/repository/projectname`
-        * Repo name: `projectname`
-    * Click on `Manage` then the `Pull or Deploy` tab then `Deploy HEAD Commit`.
+      * REMOTE_HOST: [account IP address]
+      * REMOTE_USER: [cPanel account name]
+      * SSH_PRIVATE_KEY: [Paste the private key from step 1]
