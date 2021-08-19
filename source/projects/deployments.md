@@ -7,7 +7,7 @@ section: content
 
 # Deploying from GitHub to Server
 
-The steps on this page assume the project's GitHub repo is already connected to the website's cPanel account. Instructions for setting that up are on the [Staging Sites](staging-sites) page.
+The steps on this page assume the project's GitHub repo is already connected to the website's cPanel account. Instructions for setting that up are on the [Beta Sites](beta-sites) page.
 
 This deployment process includes two different [GitHub Actions](https://github.com/actions) Workflows, which are present in Unity's starter-template: Deploy Themes and Deploy Plugin(s).
 
