@@ -64,8 +64,13 @@ The native version of PHP enabled on the server does not include support for cer
     AAAAB3Nza...
     -----END RSA PRIVATE KEY-----
     ```
+    
+2. Authorize new SSH key
+    * cPanel > SSH Access > Manage SSH Keys
+    * github_rsa: Manage
+    * Authorize
 
-2. Add secrets to GitHub
+3. Add secrets to GitHub
     * In the GitHub repository for this project, go to Settings > Secrets. Create the following new repository secrets:
 
       * REMOTE_HOST: [account IP address]
