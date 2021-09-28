@@ -9,72 +9,105 @@ section: content
 
 Use this workflow if you are setting up a new Simple website.
 
-## 1. Add new site
+## 1. Add new site from template
 
-Login to the Just Get Simple dashboard. From the top bar go to My Sites > Network Admin > Sites. Then click the "Add New" button.
+Login to the Just Get Simple dashboard. From the top bar go to My Sites > Network Admin > NS Cloner.
 
-- Site Address (URL): justgetsimple.com/`clientname`
-- Site Title: `Client Name`
-- Site Language: English (United States)
-- Admin Email: `admin@unitywebagency.com`
+- Use Standard Clone
+- Select “Simple Starter Template” as the source to clone
+- Enter the site’s title and address.
+- Keep all other default settings.
+- Click “Clone Query” at the bottom of the page.
+- Once the clone has completed, close the overlay.
+- In the top bar, go to My Sites and select the new site you just created!
 
-## 2. Configure site settings
 
-Click "Edit Site." On the settings tab, change the following:
+## 2. Add Userback
 
-- Blog Description: Change to something relevant
-- Start Of Week: 0
-- Use Smilies: 0
-- Require Name Email: leave empty
-- Comments Notify: 0
-- Default Comment Status: closed
-- Default Ping Status: closed
-- Default Pingback Flag: leave empty
-- Comment Moderation: 1
-- Moderation Notify: leave empty
-- GMT Offset: leave empty
-- Template: simple-unity/resources
-- Stylesheet: simple-unity/resources
-- Comment Registration: 1
-- Show Avatars: 0
-- Thumbnail Size W: 300
-- Thumbnail Size H: 300
-- Medium Size W: 600
-- Medium Size H: 600
-- Thread Comments: leave empty
-- Page Comments: leave empty
-- Timezone String: America/New_York (or the client's timezone string)
+1. Log into https://app.userback.io/
+2. From the projects dropdown, click on “View All Projects”
+3. Create a new Project:
+    - Set the project name
+    - Add the beta site URL
+    - Feedback Type: Website Design Feedback
+    - Keep the rest of the default settings
+4. In the Widget settings accordions:
+    - Widget Button:
+        - Change color to make sure it stands out
+        - Change position if necessary for design
+    - Feedback Selection:
+        - Screenshot feedback: On
+        - General feedback: Off
+        - View existing feedback: On
+        - Contact us: Off
+    - Feedback Form:
+        - Rating type: On and select emojis
+        - Name: On and required
+        - Email: On and required
+        - Comment: On but not required
+        - Category: On and required
+        - Leave the rest default
+    - Additional Tweaks:
+        - Always include a screenshot
+        - Show help in annotation tools: First time only
+    - Thank You Message:
+        - Can adjust this if you want, but don’t need to!
+    - Don’t need to change any of the other settings
+    - Save!
+5. Copy the widget code from that accordion and add to WordPress:
+    - In the website’s WP admin dashboard, go to HFCM (towards the bottom of the menu)
+        - If the menu isn’t displaying, go to Plugins -> Header Footer Code Manager and click the Activate button.
+    - Add New Snippet
+        - Snippet Name: Userback
+        - Keep the defaults
+        - Paste the widget code in “Snippet/Code” field.
+        - Save!
 
-## 3. Clean up defaults
-
-1. Delete “Hello World!” post and empty trash.
-2. Delete “Sample Page” page and empty trash.
-
-## 4. Set up basic site config
-
-1. Add home page:
-    - Title: Home
-    - Page Attributes > Template: Full Width Without Title
-    - Publish
-2. Customizer > Site Identity
-    - Upload logo
-    - Upload favicon
-3. Customizer > Simple Settings
-    - Set Font Pairing
-    - Set Color Scheme
-4. Customizer > Header Settings
-    - Logo Width (make sure it's legible, but not overly large)
-    - Align Logo:
-        - Inline Left (Logo is to the left of the navigation)
-        - Float Left (Logo is above navigation bar, aligned left)
-        - Float Center (Logo is above navigation bar, centered)
-        - Hide Logo (Logo is not present)
-5. Customizer > Footer Settings AND Customizer > Widgets
-    - Set Footer Color
-    - Add widgets for 3 columns in footer
-6. Customizer > Menus
-    - Primary Navigation: appears at top of site
-    - Social Links: Use in widget to place in footer
-    - Footer Links: Replaces default "Privacy Policy"
-7. Customizer > Additional CSS
-    - AAAAAaaalllll the overrides.
+## 3. Configure global site areas (Header and Footer):
+1. Bulk create all pages in navigation using Tools > Quick Post Creator
+    - Change post type to "Pages"
+    - Enter list of all page titles on individual lines.
+        - *__NOTE:__ You do not need to add Home, Privacy Policy, Terms of Use, or Accessibility (these are included in the starter template by default).*
+2. In Appearance > Menus
+    - Create new menu: “Primary Navigation”
+        - Check Display location: Primary Navigation
+        - Add pages based on information architecture (IA) document
+        - If a menu item is marked "dropdown only" in the IA document, use Custom Links:
+            - Change URL to: #
+            - Add Link Text
+    - Create new menu: “Social”
+        - Check Display location: Social Links
+        - Add links to social media profiles using Custom Links.
+            - Link text should be the name of the social channel only (e.g. Twitter, Instagram, Facebook, etc) — NOT the social media handle.
+        - After each link is added to the menu, expand each link card to show the link item's settings. Add a CSS class using the following format: icon-[channel]. Examples:
+            - icon-twitter
+            - icon-linkedin
+            - icon-facebook
+            - icon-youtube
+            - icon-instagram
+3. In Appearance > Customize
+    - Site Identity:
+        - Logo: Upload logo that will go in header
+        - Site Icon: Upload favicon in PNG format
+    - Simple Settings:
+        - Select font pairing
+        - Select color scheme
+        - Select button font to use either body or header font
+    - Header Settings:
+        - Adjust width of logo
+        - Set logo alignment
+        - Set CTA button (if applicable)
+        - Set header color
+        - Set header text color (light or dark)
+        - Set header navbar color (if different from header color)
+    - Footer Settings:
+        - Select footer color
+    - Widgets:
+        - Use the 3 available widget areas to create the site footer. Examples of the kinds of widgets that may be used in the footer include:
+            - Image (logo)
+            - Gallery (membership badges, awards, etc)
+            - Text (contact information, short blurb, etc)
+            - Navigation Menu (page links, social media links)
+    - Homepage Settings:
+        - Set homepage to display: "A static page" and select "Home" from the homepage dropdown. If the website has a blog or a news page, select the corresponding page from the dropdown for Posts page.
+    - Additional CSS may be necessary to customize the global site areas further, but this is it for now!
