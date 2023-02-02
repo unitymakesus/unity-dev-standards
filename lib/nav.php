@@ -25,6 +25,9 @@ return [
     ],
     'Tools' => [
         'url' => 'tools',
+        'children' => [
+            'Windows' => 'tools/windows',
+        ],
     ],
     'Security' => [
         'url' => 'security',
