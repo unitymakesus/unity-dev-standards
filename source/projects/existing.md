@@ -46,7 +46,7 @@ Run `yarn` to install any dependencies for running build processes for front-end
 yarn
 ```
 
-**Note:** Check the `package.json` and `composer.json` files in the theme for required minimum versions of Node and PHP, respectively.
+**Note:** Check the `package.json` and `composer.json` files in the theme for info about the minimum required versions of Node and PHP, respectively.
 
 ### Sage 9 Themes
 In most cases, these older projects use a parent theme _(unity-core)_ and a child theme _(unity-child)_. Shell into your project using Local and run `composer install` from the parent theme's directory to install any PHP dependencies.
@@ -61,9 +61,7 @@ Run `yarn` to install any dependencies for running build processes for front-end
 yarn
 ```
 
-**Note:** Check the `package.json` and `composer.json` files in the theme for required minimum versions of Node and PHP, respectively.
-
-**Note:** Some projects may deviate from this convention. Review the parent theme and child theme, or active theme, for composer.json and package.json files.
+**Note:** Some projects may deviate from this convention. Review the parent theme and child theme, or active theme, for `composer.json` and `package.json` files, which should contain info about the minimum required versions of Node and PHP, respectively.
 
 ## 4. Pull down the Staging Database
 
