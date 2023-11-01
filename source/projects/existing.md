@@ -29,19 +29,39 @@ cp -r [PROJECT-NAME]/. .
 rm -rf [PROJECT-NAME]
 ```
 
-## 3. Set up Theme Dependencies
+## 3. Install Theme Dependencies
 
-Run the following commands in the unity-child theme directory:
+This process depends on the active WordPress theme. If the theme does not have a **composer.json** for required PHP dependencies or a **package.json** file in it for building front-end assets, you may skip this step.
 
-```
+### Sage 10 Themes 
+Shell into your project using Local and run Composer from the active theme's directory to install any PHP dependencies.
+
+```bash
 composer install
+```
+
+Run `yarn` to install any dependencies for running build processes for front-end assets. Running this command is optional if you're not doing front-end work.
+
+```bash
 yarn
 ```
 
-Update browsersync settings in `wp-content/themes/unity-child/resources/assets/config.json`:
+**Note:** Check the `package.json` and `composer.json` files in the theme for info about the minimum required versions of Node and PHP, respectively.
 
-- `devUrl` should reflect your local dev url
-- `proxyUrl` should be localhost:3000
+### Sage 9 Themes
+In most cases, these older projects use a parent theme _(unity-core)_ and a child theme _(unity-child)_. Shell into your project using Local and run `composer install` from the parent theme's directory to install any PHP dependencies.
+
+```bash
+composer install
+```
+
+Run `yarn` to install any dependencies for running build processes for front-end assets. Running this command is optional if you're not doing front-end work.
+
+```bash
+yarn
+```
+
+**Note:** Some projects may deviate from this convention. Review the parent theme and child theme, or active theme, for `composer.json` and `package.json` files, which should contain info about the minimum required versions of Node and PHP, respectively.
 
 ## 4. Pull down the Staging Database
 
