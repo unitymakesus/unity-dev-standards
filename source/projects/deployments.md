@@ -7,9 +7,9 @@ section: content
 
 # Deploying from GitHub to Server
 
-The steps on this page assume the project's GitHub repo is already connected to the website's cPanel account. Instructions for setting that up are on the [Beta Sites](projects/beta-sites) page.
+The steps on this page assume the project's GitHub repo is already connected to the website's cPanel account. Instructions for setting that up are on the [Beta Sites](/projects/beta-sites) page.
 
-This deployment process includes two different [GitHub Actions](https://github.com/actions) Workflows, which are present in Unity's starter-template: Deploy Themes and Deploy Plugin(s).
+This deployment process includes two different Workflows for [GitHub Actions](https://github.com/actions): Deploy Themes and Deploy Plugin(s).
 
 The reason for this separation is to support the multiple technologies we are using to keep websites up-to-date. On each website's cPanel account, we are using Softaculous to install WordPress and perform automatic minor version updates, so the WP core files do not need to be committed to the repository. We are also using ManageWP to perform centralized updates, so we do not want deployments to unnecessarily overwrite plugin updates.
 
