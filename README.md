@@ -4,8 +4,8 @@ Our nifty static site powered by [Jigsaw](https://jigsaw.tighten.co/)!
 ## Getting Started
 
 **System Requirements**
-* PHP 8.0
-* Node > 8
+* PHP 8.2
+* Node 16
 * npm
 * Composer
 
@@ -21,7 +21,7 @@ In progress...check back soon!
 ## Build Tasks
 * Dev: `npm run dev`
 * Dev + Browsersync: `npm run watch`
-* Production: `npm run production`
+* Production: `npm run prod`
 
 ## Deploying
-This static site is hosted on Netlify and it is set up with continous deployment. There's nothing you need to do other than push your changes to `main`. Netlify will read the `netlify.toml` file in this repository and run a full build to generate the static site and compile assets. Awesome!
+This static site is hosted on Netlify and it is set up with continous deployment. There's nothing you need to do other than push or merge your changes to the `main` branch. Netlify will read the `netlify.toml` file in this repository and run a full build to generate the static site and compile assets.
