@@ -15,5 +15,4 @@ mix.js('source/_assets/js/main.js', 'js')
       require('tailwindcss'),
     ],
   })
-  .sourceMaps()
   .version();
