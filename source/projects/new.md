@@ -23,7 +23,9 @@ composer install && yarn
 
 ## 3. Set up Git Repository
 
-Before proceeding, be sure to add a [.gitignore](https://github.com/unitymakesus/.github/blob/main/.gitignore) and [GitHub Actions](https://github.com/unitymakesus/.github/tree/main/.github/workflows) to your project by placing these files in the root of your project.
+Before proceeding, be sure to add our standard [.gitignore](https://github.com/unitymakesus/.github/blob/main/.gitignore) and [workflows](https://github.com/unitymakesus/.github/tree/main/.github/workflows) to your project. The .gitignore file should be placed at the root of your project's repository and workflows for GitHub Actions need to be placed inside of a **.github/workflows/** directory.
+
+For more information on how we use and configure these workflows, check the [Deployments](/projects/deployments) page.
 
 ```
 git init
@@ -41,3 +43,7 @@ git push origin dev
 ```
 
 Set `dev` as the default branch in GitHub and continue development!
+
+## Resources
+* [Ignoring Files](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files)
+* [GitHub Actions](https://docs.github.com/en/actions)

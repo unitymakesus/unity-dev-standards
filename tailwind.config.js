@@ -1,18 +1,16 @@
 module.exports = {
-  purge: {
-    content: [
-      'source/**/*.html',
-      'source/**/*.md',
-      'source/**/*.js',
-      'source/**/*.php',
-      'source/**/*.vue',
+  content: [
+    'source/**/*.html',
+    'source/**/*.md',
+    'source/**/*.js',
+    'source/**/*.php',
+    'source/**/*.vue',
+  ],
+  options: {
+    whitelist: [
+      /language/,
+      /hljs/,
     ],
-    options: {
-      whitelist: [
-        /language/,
-        /hljs/,
-      ],
-    },
   },
   theme: {
     extend: {
