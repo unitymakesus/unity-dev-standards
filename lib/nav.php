@@ -15,12 +15,10 @@ return [
     ],
     'Projects' => [
         'children' => [
-            'New Projects' => 'projects/new',
-            'New Simple' => 'projects/new-simple',
+            'New Projects'      => 'projects/new',
             'Existing Projects' => 'projects/existing',
-            'Beta Sites' => 'projects/beta-sites',
-            'Staging Sites' => 'projects/staging-sites',
-            'Deployments' => 'projects/deployments',
+            'Beta Sites'        => 'projects/beta-sites',
+            'Deployments'       => 'projects/deployments',
         ],
     ],
     'Tools' => [

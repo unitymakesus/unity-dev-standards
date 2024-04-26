@@ -13,6 +13,13 @@ This deployment process includes two different Workflows for [GitHub Actions](ht
 
 The reason for this separation is to support the multiple technologies we are using to keep websites up-to-date. On each website's cPanel account, we are using Softaculous to install WordPress and perform automatic minor version updates, so the WP core files do not need to be committed to the repository. We are also using ManageWP to perform centralized updates, so we do not want deployments to unnecessarily overwrite plugin updates.
 
+Before proceeding, please ensure these two [GitHub Action workflow files](https://github.com/unitymakesus/.github/tree/main/.github/workflows) are present in your project, at the following paths:
+
+```
+.github/workflows/deploy-plugins.yml
+.github/workflows/deploy-themes.yml
+```
+
 ## Deploying Themes
 
 You may optionally deploy theme files from the GitHub repo to the server at any point. It will always overwrite the entire `wp-content/themes` directory (except for the `vendor` directory inside any theme) with the HEAD commit on the selected branch.
